@@ -37,20 +37,62 @@
 			</div>
 		</nav>
 
-
 		<!-- Page Header -->
 		<header class="page-header header container-fluid">
 
 				<div class="stars"><div class="twinkling"><div class="clouds"></div></div></div>
 
 				<div class="description">
-					<h1>Latest Space News</h1>
+					<h1>Search Space News</h1>
 				</div>
 		</header>
 
 
 		<!-- Page Data -->
 		<div class="container features">
+
+			<!-- Search Form -->
+			<div class="search-form mx-auto mb-5">
+				<form>
+					<h2 class="text-center mb-3">Search</h2>
+					<div class="form-group row">
+						<label for="title" class="col-sm-4 col-md-2 col-lg-1 col-form-label">Title</label>
+						<div class="col-sm-8 col-md-10 col-lg-5">
+							<input type="text" class="form-control" id="title" placeholder="Type keywords">
+						</div>
+
+						<label for="summary" class="col-sm-4 col-md-2 col-lg-1 col-form-label">Summary</label>
+						<div class="col-sm-8 col-md-10 col-lg-5">
+							<input type="text" class="form-control" id="summary" placeholder="Type keywords">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="before" class="col-sm-4 col-md-2 col-lg-1 col-form-label">Before</label>
+						<div class="col-sm-8 col-md-10 col-lg-5">
+							<input type="text" class="form-control datepicker" id="before" placeholder="yyyy-mm-dd">
+						</div>
+
+						<label for="after" class="col-sm-4 col-md-2 col-lg-1 col-form-label">After</label>
+						<div class="col-sm-8 col-md-10 col-lg-5">
+							<input type="text" class="form-control datepicker" id="after" placeholder="yyyy-mm-dd">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-4 col-md-2 col-lg-1">Featured</div>
+						<div class="col-sm-8 col-md-10 col-lg-11">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="featured">
+								<label class="form-check-label" for="featured">Enable to show only featured news</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row justify-content-center">
+						<button type="button" id="searchBtn" class="btn btn-primary px-5">Search</button>
+					</div>
+				</form>
+			</div>
+
+
 			<!-- Articles Data -->
 			<div class="row" id="articles-data">
 				<!-- Article information comes here -->
@@ -60,6 +102,17 @@
 			<div id="pagination-data">
 				<!-- Pagination list comes here -->
 			</div>
+		</div>
+
+
+		<!-- Toast with message information -->
+		<div class="toast" data-autohide="true" data-delay="3000" style="position:absolute; top: 62px; right:10px;">
+			<div class="toast-header">
+			  	<strong class="mr-auto text-primary">Search</strong>
+			  	<small class="text-muted">Right now</small>
+			  	<button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+			</div>
+			<div class="toast-body">Your search results are ready.</div>
 		</div>
 
 
@@ -90,6 +143,6 @@
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="jquery-ui/js/jquery-ui-1.12.1.min.js"></script>
 		<script src="js/load-articles.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/search.js"></script>
 	</body>
 </html>
